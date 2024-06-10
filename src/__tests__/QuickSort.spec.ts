@@ -1,9 +1,7 @@
 import { QuickSort } from "../katas/QuickSort";
 
-describe("QuickSort", () => {
-  it("should sort an array in place", () => {
-    expect(QuickSort([6, 3, 8, 4, 1111, 234, 0])).toEqual([
-      0, 3, 4, 6, 8, 234, 1111,
-    ]);
-  });
+test("quick sort", function () {
+  const arr = [9, 3, 7, 4, 69, 420, 42];
+  QuickSort(arr);
+  expect(arr).toEqual([3, 4, 7, 9, 42, 69, 420]);
 });

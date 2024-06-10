@@ -1,31 +1,31 @@
-function qs(a: number[], lo: number, hi: number): void {
+function qs(arr: number[], lo: number, hi: number): void {
   if (lo >= hi) {
     return;
   }
-  const pivotIdx = partition(a, lo, hi);
-  qs(a, lo, pivotIdx - 1);
-  qs(a, pivotIdx + 1, hi);
+  const pivotIdx = partition(arr, lo, hi);
+  qs(arr, lo, pivotIdx - 1);
+  qs(arr, pivotIdx + 1, hi);
 }
 
-function partition(a: number[], lo: number, hi: number): number {
-  const pivot = a[hi];
+function partition(arr: number[], lo: number, hi: number): number {
+  const pivot = arr[hi];
   let idx = lo - 1;
-  for (let i = lo; i < hi; i++) {
-    if (a[i] <= pivot) {
+
+  for (let i = lo; i < hi; ++i) {
+    if (arr[i] <= pivot) {
       idx++;
-      const tmp = a[i];
-      a[i] = a[idx];
-      a[idx] = tmp;
+      const tmp = arr[i];
+      arr[i] = arr[idx];
+      arr[idx] = tmp;
     }
   }
   idx++;
-  a[hi] = a[idx];
-  a[idx] = pivot;
-
+  arr[hi] = arr[idx];
+  arr[idx] = pivot;
   return idx;
 }
 
-export function QuickSort(a: number[]): number[] {
-  qs(a, 0, a.length - 1);
-  return a;
+export function QuickSort(arr: number[]): number[] {
+  qs(arr, 0, arr.length - 1);
+  return arr;
 }

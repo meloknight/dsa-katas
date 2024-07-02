@@ -1,1 +1,3 @@
-export function BinarySearchList(haystack: number[], needle: number): boolean {}
+export function BinarySearchList(haystack: number[], needle: number): boolean {
+
+}

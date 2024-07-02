@@ -1,1 +1,3 @@
-export function SlidingWindow(arr: number[]): number {}
+export function SlidingWindow(arr: number[]): number {
+
+}

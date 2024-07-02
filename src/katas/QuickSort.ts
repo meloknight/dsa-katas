@@ -1,1 +1,2 @@
-export function QuickSort(arr: number[]): number[] {}
+export function QuickSort(arr: number[]): number[] {
+}
